@@ -77,6 +77,14 @@ public class DungChung
         }
         return rowsAffected;
     }
+    public int ExecuteScalar(string query)
+    {
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                var result = cmd.ExecuteScalar();
+            return result != null ? Convert.ToInt32(result) : 0;
+        }
+    }
 
     public void LoadDataToGridView(string query, DataGridView dgv)
     {

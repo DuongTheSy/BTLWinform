@@ -110,6 +110,7 @@
             // 
             // txtMa
             // 
+            txtMa.Enabled = false;
             txtMa.Location = new Point(176, 25);
             txtMa.Name = "txtMa";
             txtMa.Size = new Size(320, 30);
@@ -117,6 +118,7 @@
             // 
             // txtTen
             // 
+            txtTen.Enabled = false;
             txtTen.Location = new Point(176, 73);
             txtTen.Name = "txtTen";
             txtTen.Size = new Size(320, 30);
@@ -124,6 +126,7 @@
             // 
             // dNgaySinh
             // 
+            dNgaySinh.Enabled = false;
             dNgaySinh.Format = DateTimePickerFormat.Short;
             dNgaySinh.Location = new Point(176, 123);
             dNgaySinh.Name = "dNgaySinh";
@@ -133,6 +136,7 @@
             // rdNam
             // 
             rdNam.AutoSize = true;
+            rdNam.Enabled = false;
             rdNam.Location = new Point(176, 183);
             rdNam.Name = "rdNam";
             rdNam.Size = new Size(68, 26);
@@ -144,6 +148,7 @@
             // rdNu
             // 
             rdNu.AutoSize = true;
+            rdNu.Enabled = false;
             rdNu.Location = new Point(288, 181);
             rdNu.Name = "rdNu";
             rdNu.Size = new Size(56, 26);
@@ -154,6 +159,7 @@
             // 
             // txtEmail
             // 
+            txtEmail.Enabled = false;
             txtEmail.Location = new Point(176, 223);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(320, 30);
@@ -161,6 +167,7 @@
             // 
             // txtSDT
             // 
+            txtSDT.Enabled = false;
             txtSDT.Location = new Point(176, 270);
             txtSDT.Name = "txtSDT";
             txtSDT.Size = new Size(320, 30);
@@ -168,6 +175,7 @@
             // 
             // txtDiaChi
             // 
+            txtDiaChi.Enabled = false;
             txtDiaChi.Location = new Point(176, 318);
             txtDiaChi.Name = "txtDiaChi";
             txtDiaChi.Size = new Size(320, 30);

@@ -12,10 +12,12 @@ namespace BTLWinform
 {
     public partial class UC_ThongTinCaNhan : UserControl
     {
-        public UC_ThongTinCaNhan()
+        private int maSinhVien;
+        public UC_ThongTinCaNhan(int ma)
         {
             InitializeComponent();
             Dock = DockStyle.Fill;
+            maSinhVien = ma;
             LoadData();
         }
 
@@ -23,7 +25,7 @@ namespace BTLWinform
         {
             DungChung dungChung = new DungChung();
             dungChung.OpenConnection();
-            string query = "SELECT * FROM SinhVien Where MaSV = 1";
+            string query = $"SELECT * FROM SinhVien Where MaSV = {maSinhVien}";
             DataTable dt = dungChung.GetDataTable(query);
             foreach (DataRow row in dt.Rows)
             {

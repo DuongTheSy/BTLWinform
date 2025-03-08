@@ -111,6 +111,7 @@
             btnDangXuat.Size = new Size(220, 50);
             btnDangXuat.TabIndex = 3;
             btnDangXuat.Text = "Đăng xuất";
+            btnDangXuat.Click += btnDangXuat_Click;
             // 
             // panelContent
             // 
@@ -139,7 +140,7 @@
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(970, 70);
             lblTitle.TabIndex = 0;
-            lblTitle.Text = "Lịch học";
+            lblTitle.Text = "Chúc một ngày tốt lành";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // FrmSinhVien
@@ -148,7 +149,9 @@
             Controls.Add(panelContent);
             Controls.Add(panelMenu);
             Name = "FrmSinhVien";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Giao diện Sinh Viên";
+            Load += FrmSinhVien_Load;
             panelMenu.ResumeLayout(false);
             panelContent.ResumeLayout(false);
             ResumeLayout(false);

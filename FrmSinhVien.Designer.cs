@@ -35,8 +35,8 @@
             btnThongTinCaNhan = new Button();
             btnDangXuat = new Button();
             panelContent = new Panel();
-            lblTitle = new Label();
             pnContent = new Panel();
+            lblTitle = new Label();
             panelMenu.SuspendLayout();
             panelContent.SuspendLayout();
             SuspendLayout();
@@ -99,6 +99,7 @@
             btnThongTinCaNhan.Size = new Size(220, 50);
             btnThongTinCaNhan.TabIndex = 2;
             btnThongTinCaNhan.Text = "Thông tin cá nhân";
+            btnThongTinCaNhan.Click += btnThongTinCaNhan_Click;
             // 
             // btnDangXuat
             // 
@@ -122,6 +123,14 @@
             panelContent.Size = new Size(970, 688);
             panelContent.TabIndex = 0;
             // 
+            // pnContent
+            // 
+            pnContent.Dock = DockStyle.Fill;
+            pnContent.Location = new Point(0, 70);
+            pnContent.Name = "pnContent";
+            pnContent.Size = new Size(970, 618);
+            pnContent.TabIndex = 1;
+            // 
             // lblTitle
             // 
             lblTitle.Dock = DockStyle.Top;
@@ -132,14 +141,6 @@
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Lịch học";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // pnContent
-            // 
-            pnContent.Dock = DockStyle.Fill;
-            pnContent.Location = new Point(0, 70);
-            pnContent.Name = "pnContent";
-            pnContent.Size = new Size(970, 618);
-            pnContent.TabIndex = 1;
             // 
             // FrmSinhVien
             // 

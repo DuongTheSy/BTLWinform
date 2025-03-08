@@ -9,28 +9,21 @@ namespace BTLWinform
         public FrmSinhVien()
         {
             InitializeComponent();
-            LoadLichHoc();
         }
 
 
         private void btnLichHoc_Click_1(object sender, EventArgs e)
         {
-            lblTitle.Text = "Lịch học 1";
+            lblTitle.Text = "Lịch học";
             pnContent.Controls.Clear();
             pnContent.Controls.Add(new UC_LichHoc());
         }
-        private void LoadLichHoc()
+
+        private void btnThongTinCaNhan_Click(object sender, EventArgs e)
         {
-            //DungChung dungChung = new DungChung();
-            //dungChung.OpenConnection();
-            //string query = @"SELECT mh.TenMH, mh.SoTinChi, ltc.HocKy, ltc.NamHoc, ltc.BuoiHoc
-            //                     FROM DangKy dk
-            //                     JOIN LopTinChi ltc ON dk.MaLTC = ltc.MaLTC
-            //                     JOIN MonHoc mh ON ltc.MaMH = mh.MaMH
-            //                     WHERE dk.MaSV = 1";
-            //dungChung.LoadDataToGridView(query, dataGridView1);
-            //dungChung.CloseConnection();
-        
+            lblTitle.Text = "Thông tin cá nhân";
+            pnContent.Controls.Clear();
+            pnContent.Controls.Add(new UC_ThongTinCaNhan());
         }
     }
 }

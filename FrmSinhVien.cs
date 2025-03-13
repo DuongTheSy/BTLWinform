@@ -42,5 +42,12 @@ namespace BTLWinform
                 frmDangNhap.Show();
             }
         }
+
+        private void btnDangKyMon_Click(object sender, EventArgs e)
+        {
+            lblTitle.Text = "Đăng ký tín chỉ";
+            pnContent.Controls.Clear();
+            pnContent.Controls.Add(new UC_DangKyMon());
+        }
     }
 }

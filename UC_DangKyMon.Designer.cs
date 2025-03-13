@@ -28,9 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            dgvLopTinChi = new DataGridView();
+            btnDangKy = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvLopTinChi).BeginInit();
+            SuspendLayout();
+            // 
+            // dgvLopTinChi
+            // 
+            dgvLopTinChi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvLopTinChi.BackgroundColor = Color.White;
+            dgvLopTinChi.ColumnHeadersHeight = 29;
+            dgvLopTinChi.Dock = DockStyle.Fill;
+            dgvLopTinChi.Location = new Point(0, 0);
+            dgvLopTinChi.Name = "dgvLopTinChi";
+            dgvLopTinChi.RowHeadersVisible = false;
+            dgvLopTinChi.RowHeadersWidth = 51;
+            dgvLopTinChi.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvLopTinChi.Size = new Size(457, 219);
+            dgvLopTinChi.TabIndex = 0;
+            // 
+            // btnDangKy
+            // 
+            btnDangKy.Dock = DockStyle.Bottom;
+            btnDangKy.Location = new Point(0, 219);
+            btnDangKy.Name = "btnDangKy";
+            btnDangKy.Size = new Size(457, 45);
+            btnDangKy.TabIndex = 1;
+            btnDangKy.Text = "Đăng ký";
+            // 
+            // UC_DangKyMon
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(dgvLopTinChi);
+            Controls.Add(btnDangKy);
+            Name = "UC_DangKyMon";
+            Size = new Size(457, 264);
+            ((System.ComponentModel.ISupportInitialize)dgvLopTinChi).EndInit();
+            ResumeLayout(false);
         }
+
+        private DataGridView dgvLopTinChi;
+        private Button btnDangKy;
 
         #endregion
     }

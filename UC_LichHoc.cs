@@ -30,7 +30,8 @@ namespace BTLWinform
                  JOIN LopTinChi ltc ON dk.MaLTC = ltc.MaLTC
                  JOIN MonHoc mh ON ltc.MaMH = mh.MaMH
                  JOIN GiangVien gv ON ltc.MaGV = gv.MaGV
-                 WHERE dk.MaSV = {maSinhVien}";
+                 WHERE dk.MaSV = {maSinhVien}
+                 ORDER BY ThuMay";
 
             DataTable dt = dungChung.GetDataTable(query);
             foreach (DataRow dr in dt.Rows)

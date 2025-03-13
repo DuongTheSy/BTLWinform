@@ -15,6 +15,19 @@ namespace BTLWinform
         public UC_DangKyMon()
         {
             InitializeComponent();
+            Dock = DockStyle.Fill;
+            LoadDangKyMon();
+        }
+        private void LoadDangKyMon()
+        {
+            string query = "";
+            DungChung dungchung = new DungChung();
+            dungchung.OpenConnection();
+            query = "SELECT ltc.MaLTC, mh.TenMH, mh.SoTinChi, ltc.HocKy, ltc.NamHoc, gv.HoTen AS GiangVien, ltc.BuoiHoc " +
+                               "FROM LopTinChi ltc " +
+                               "JOIN MonHoc mh ON ltc.MaMH = mh.MaMH " +
+                               "LEFT JOIN GiangVien gv ON ltc.MaGV = gv.MaGV";
+            dungchung.LoadDataToGridView(query,dgvLopTinChi);
         }
     }
 }

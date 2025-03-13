@@ -1,14 +1,14 @@
 ﻿namespace BTLWinform
 {
-    partial class FrmSinhVien
+    partial class FrmAdmin
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,12 +23,13 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             panelMenu = new Panel();
+            button1 = new Button();
             btnDoiMatKhau = new Button();
             btnLichHoc = new Button();
             btnDangKyMon = new Button();
@@ -44,6 +45,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(41, 128, 185);
+            panelMenu.Controls.Add(button1);
             panelMenu.Controls.Add(btnDoiMatKhau);
             panelMenu.Controls.Add(btnLichHoc);
             panelMenu.Controls.Add(btnDangKyMon);
@@ -54,6 +56,18 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(220, 688);
             panelMenu.TabIndex = 1;
+            // 
+            // button1
+            // 
+            button1.Dock = DockStyle.Top;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(0, 150);
+            button1.Name = "button1";
+            button1.Size = new Size(220, 50);
+            button1.TabIndex = 2;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
             // 
             // btnDoiMatKhau
             // 
@@ -75,8 +89,7 @@
             btnLichHoc.Name = "btnLichHoc";
             btnLichHoc.Size = new Size(220, 50);
             btnLichHoc.TabIndex = 0;
-            btnLichHoc.Text = "Lịch học";
-            btnLichHoc.Click += btnLichHoc_Click_1;
+            btnLichHoc.Text = "Quản lý giảng viên";
             // 
             // btnDangKyMon
             // 
@@ -87,8 +100,7 @@
             btnDangKyMon.Name = "btnDangKyMon";
             btnDangKyMon.Size = new Size(220, 50);
             btnDangKyMon.TabIndex = 1;
-            btnDangKyMon.Text = "Đăng ký môn";
-            btnDangKyMon.Click += btnDangKyMon_Click;
+            btnDangKyMon.Text = "Quản lý sinh viên";
             // 
             // btnThongTinCaNhan
             // 
@@ -99,8 +111,7 @@
             btnThongTinCaNhan.Name = "btnThongTinCaNhan";
             btnThongTinCaNhan.Size = new Size(220, 50);
             btnThongTinCaNhan.TabIndex = 2;
-            btnThongTinCaNhan.Text = "Thông tin cá nhân";
-            btnThongTinCaNhan.Click += btnThongTinCaNhan_Click;
+            btnThongTinCaNhan.Text = "Trang chủ";
             // 
             // btnDangXuat
             // 
@@ -112,7 +123,6 @@
             btnDangXuat.Size = new Size(220, 50);
             btnDangXuat.TabIndex = 3;
             btnDangXuat.Text = "Đăng xuất";
-            btnDangXuat.Click += btnDangXuat_Click;
             // 
             // panelContent
             // 
@@ -144,15 +154,14 @@
             lblTitle.Text = "Chúc một ngày tốt lành";
             lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // FrmSinhVien
+            // FrmAdmin
             // 
             ClientSize = new Size(1190, 688);
             Controls.Add(panelContent);
             Controls.Add(panelMenu);
-            Name = "FrmSinhVien";
+            Name = "FrmAdmin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Giao diện Sinh Viên";
-            Load += FrmSinhVien_Load;
+            Text = "Quyền quản trị viên";
             panelMenu.ResumeLayout(false);
             panelContent.ResumeLayout(false);
             ResumeLayout(false);
@@ -169,5 +178,6 @@
         private Button btnLichHoc;
         private Button btnDoiMatKhau;
         private Panel pnContent;
+        private Button button1;
     }
 }

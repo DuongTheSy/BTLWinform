@@ -24,11 +24,18 @@ namespace BTLWinform
             string matKhau = txtMatKhau.Text;
             string vaiTro = "";
             string query = "";
+            string ma = "";
 
             if (rdoSinhVien.Checked)
+            {
                 vaiTro = "SinhVien";
+                ma = "MaSV";
+            }
             if (rdoGiangVien.Checked)
+            {
                 vaiTro = "GiangVien";
+                ma = "MaGV";
+            }
 
             if (string.IsNullOrEmpty(taiKhoan) || string.IsNullOrEmpty(matKhau))
             {
@@ -37,12 +44,13 @@ namespace BTLWinform
             }
             DungChung dungChung = new DungChung();
             dungChung.OpenConnection();
-            query = $"SELECT MaSV FROM {vaiTro} WHERE TenDangNhap = '{taiKhoan}' AND MatKhau = '{matKhau}'";
+            query = $"SELECT {ma} FROM {vaiTro} WHERE TenDangNhap = '{taiKhoan}' AND MatKhau = '{matKhau}'";
             maNguoiDung = dungChung.ExecuteScalar(query);
             System.Diagnostics.Debug.WriteLine(maNguoiDung);
             if (maNguoiDung != 0)
             {
-                FrmSinhVien frmSinhVien = new FrmSinhVien(maNguoiDung);
+                System.Diagnostics.Debug.WriteLine(vaiTro);
+                FrmSinhVien frmSinhVien = new FrmSinhVien(maNguoiDung, vaiTro);
                 this.Hide();
                 frmSinhVien.Show();
             }

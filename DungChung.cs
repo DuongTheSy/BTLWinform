@@ -57,19 +57,85 @@ public class DungChung
     }
 
 
-    // Phương thức thực thi câu lệnh SQL (INSERT, UPDATE, DELETE)
-    public int ExecuteNonQuery(string query)
+    // Thêm sửa xóa
+    //public bool ExecuteNonQuery(string query, object[] parameter = null)
+    //{
+    //    int data = 0;
+    //    using (SqlConnection connection = new SqlConnection(connectionString))
+    //    {
+    //        connection.Open();
+    //        SqlCommand command = new SqlCommand(query, connection);
+    //        if (parameter != null)
+    //        {
+    //            string[] listParams = query.Split(' ');
+
+    //            int i = 0;
+    //            foreach (string item in listParams)
+    //            {
+    //                if (item.Contains('@'))
+    //                {
+    //                    command.Parameters.AddWithValue(item, parameter[i]);
+    //                    i++;
+    //                }
+    //            }
+    //        }
+
+    //        data = command.ExecuteNonQuery();
+    //        connection.Close();
+    //    }
+    //    return data > 0;
+    //}
+
+    // lấy danh sách
+    public DataTable ExecuteQuery(string query, object[] parameter = null)
+    {
+        DataTable data = new DataTable();
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+            SqlCommand command = new SqlCommand(query, connection);
+            if (parameter != null)
+            {
+                string[] listParams = query.Split(' ');
+
+                int i = 0;
+                foreach (string item in listParams)
+                {
+                    if (item.Contains('@'))
+                    {
+                        command.Parameters.AddWithValue(item, parameter[i]);
+                        i++;
+                    }
+                }
+            }
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(data);
+            connection.Close();
+        }
+
+        return data;
+    }
+
+    public int ExecuteNonQuery(string query, SqlParameter[] parameters = null)
     {
         int rowsAffected = 0;
         try
         {
             OpenConnection();
-            SqlCommand command = new SqlCommand(query, connection);
-            rowsAffected = command.ExecuteNonQuery();
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                if (parameters != null)
+                {
+                    command.Parameters.AddRange(parameters);
+                }
+                rowsAffected = command.ExecuteNonQuery();
+            }
         }
         catch (Exception ex)
         {
-            Console.WriteLine("Lỗi: " + ex.Message);
+            MessageBox.Show("Lỗi: " + ex.Message, "Lỗi SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            throw; // Giúp debug dễ hơn
         }
         finally
         {
@@ -77,6 +143,27 @@ public class DungChung
         }
         return rowsAffected;
     }
+
+
+    //public int ExecuteNonQuery(string query)
+    //{
+    //    int rowsAffected = 0;
+    //    try
+    //    {
+    //        OpenConnection();
+    //        SqlCommand command = new SqlCommand(query, connection);
+    //        rowsAffected = command.ExecuteNonQuery();
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        Console.WriteLine("Lỗi: " + ex.Message);
+    //    }
+    //    finally
+    //    {
+    //        CloseConnection();
+    //    }
+    //    return rowsAffected;
+    //}
     public int ExecuteScalar(string query)
     {
             using (SqlCommand cmd = new SqlCommand(query, connection))

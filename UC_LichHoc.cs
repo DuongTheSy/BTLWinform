@@ -13,12 +13,14 @@ namespace BTLWinform
     public partial class UC_LichHoc : UserControl
     {
         private int maSinhVien;
-        public UC_LichHoc(int ma)
+        private string vaitro;
+        public UC_LichHoc(int ma, string vaitro)
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
             maSinhVien = ma;
             LoadLichHoc();
+            this.vaitro = vaitro;
         }
         private void LoadLichHoc()
         {

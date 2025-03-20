@@ -7,13 +7,25 @@
     <Compile Update="FrmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmSinhVien.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UC_QuanLyGiangVien.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_DangKyMon.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_LichHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_QuanLyMonHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UC_QuanLySinhVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="UC_ThongTinCaNhan.cs">

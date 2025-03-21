@@ -31,7 +31,7 @@ namespace BTLWinform
             foreach (DataRow dr in dt.Rows)
             {
                 dataGridView1.Rows.Add(dr["ID"], dr["MaSV"], dr["HoTen"],
-                                       dr["NgaySinh"], dr["GioiTinh"], dr["Email"], dr["SDT"], dr["DiaChi"]
+                                       Convert.ToDateTime(dr["NgaySinh"]).ToShortDateString(), dr["GioiTinh"], dr["Email"], dr["SDT"], dr["DiaChi"]
                                        );
             }
             dungChung.CloseConnection();
@@ -52,7 +52,7 @@ namespace BTLWinform
                 txtID.Text = row.Cells[0].Value.ToString();
                 txtMaSV.Text = row.Cells[1].Value.ToString();
                 txtTenSV.Text = row.Cells[2].Value.ToString();
-                txtNgaySinh.Value = (DateTime)dataGridView1.CurrentRow.Cells[3].Value;
+                txtNgaySinh.Text = row.Cells[3].Value.ToString();
                 if (row.Cells[4].Value.ToString().Trim() == "Nam")
                 {
                     rdNam.Checked = true;

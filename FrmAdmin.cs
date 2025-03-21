@@ -37,5 +37,12 @@ namespace BTLWinform
             pnContent.Controls.Clear();
             pnContent.Controls.Add(new UC_QuanLyMonHoc());
         }
+
+        private void btnQuanLyLopTinChi_Click(object sender, EventArgs e)
+        {
+            lblTitle.Text = "Quản lý môn học";
+            pnContent.Controls.Clear();
+            pnContent.Controls.Add(new UC_QuanLyLop());
+        }
     }
 }

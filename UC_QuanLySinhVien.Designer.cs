@@ -66,7 +66,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(58, 35);
             label1.Name = "label1";
-            label1.Size = new Size(36, 22);
+            label1.Size = new Size(28, 19);
             label1.TabIndex = 0;
             label1.Text = "ID:";
             // 
@@ -75,7 +75,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(208, 35);
             label2.Name = "label2";
-            label2.Size = new Size(70, 22);
+            label2.Size = new Size(56, 19);
             label2.TabIndex = 0;
             label2.Text = "Mã SV:";
             // 
@@ -84,7 +84,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(559, 35);
             label3.Name = "label3";
-            label3.Size = new Size(74, 22);
+            label3.Size = new Size(58, 19);
             label3.TabIndex = 0;
             label3.Text = "Tên SV:";
             // 
@@ -93,7 +93,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(58, 92);
             label4.Name = "label4";
-            label4.Size = new Size(94, 22);
+            label4.Size = new Size(72, 19);
             label4.TabIndex = 0;
             label4.Text = "Ngày sinh:";
             // 
@@ -102,7 +102,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(58, 147);
             label5.Name = "label5";
-            label5.Size = new Size(74, 22);
+            label5.Size = new Size(54, 19);
             label5.TabIndex = 0;
             label5.Text = "Địa chỉ:";
             // 
@@ -111,7 +111,7 @@
             label6.AutoSize = true;
             label6.Location = new Point(59, 203);
             label6.Name = "label6";
-            label6.Size = new Size(63, 22);
+            label6.Size = new Size(45, 19);
             label6.TabIndex = 0;
             label6.Text = "Email:";
             // 
@@ -120,7 +120,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(571, 92);
             label7.Name = "label7";
-            label7.Size = new Size(52, 22);
+            label7.Size = new Size(40, 19);
             label7.TabIndex = 0;
             label7.Text = "SĐT:";
             // 
@@ -129,21 +129,21 @@
             txtID.Enabled = false;
             txtID.Location = new Point(100, 32);
             txtID.Name = "txtID";
-            txtID.Size = new Size(78, 30);
+            txtID.Size = new Size(78, 26);
             txtID.TabIndex = 1;
             // 
             // txtMaSV
             // 
             txtMaSV.Location = new Point(284, 32);
             txtMaSV.Name = "txtMaSV";
-            txtMaSV.Size = new Size(243, 30);
+            txtMaSV.Size = new Size(243, 26);
             txtMaSV.TabIndex = 2;
             // 
             // txtTenSV
             // 
             txtTenSV.Location = new Point(639, 32);
             txtTenSV.Name = "txtTenSV";
-            txtTenSV.Size = new Size(243, 30);
+            txtTenSV.Size = new Size(243, 26);
             txtTenSV.TabIndex = 3;
             // 
             // txtNgaySinh
@@ -151,7 +151,7 @@
             txtNgaySinh.Format = DateTimePickerFormat.Short;
             txtNgaySinh.Location = new Point(158, 86);
             txtNgaySinh.Name = "txtNgaySinh";
-            txtNgaySinh.Size = new Size(140, 30);
+            txtNgaySinh.Size = new Size(140, 26);
             txtNgaySinh.TabIndex = 4;
             // 
             // label8
@@ -159,7 +159,7 @@
             label8.AutoSize = true;
             label8.Location = new Point(324, 92);
             label8.Name = "label8";
-            label8.Size = new Size(87, 22);
+            label8.Size = new Size(62, 19);
             label8.TabIndex = 0;
             label8.Text = "Giới tính:";
             // 
@@ -168,7 +168,7 @@
             rdNu.AutoSize = true;
             rdNu.Location = new Point(491, 90);
             rdNu.Name = "rdNu";
-            rdNu.Size = new Size(56, 26);
+            rdNu.Size = new Size(48, 23);
             rdNu.TabIndex = 13;
             rdNu.TabStop = true;
             rdNu.Text = "Nữ";
@@ -179,7 +179,7 @@
             rdNam.AutoSize = true;
             rdNam.Location = new Point(417, 90);
             rdNam.Name = "rdNam";
-            rdNam.Size = new Size(68, 26);
+            rdNam.Size = new Size(57, 23);
             rdNam.TabIndex = 12;
             rdNam.TabStop = true;
             rdNam.Text = "Nam";
@@ -189,21 +189,21 @@
             // 
             txtSDT.Location = new Point(629, 86);
             txtSDT.Name = "txtSDT";
-            txtSDT.Size = new Size(243, 30);
+            txtSDT.Size = new Size(243, 26);
             txtSDT.TabIndex = 2;
             // 
             // txtDiaChi
             // 
             txtDiaChi.Location = new Point(138, 144);
             txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Size = new Size(328, 30);
+            txtDiaChi.Size = new Size(328, 26);
             txtDiaChi.TabIndex = 14;
             // 
             // txtEmail
             // 
             txtEmail.Location = new Point(138, 200);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(328, 30);
+            txtEmail.Size = new Size(328, 26);
             txtEmail.TabIndex = 15;
             // 
             // btnThem
@@ -248,6 +248,7 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8 });
@@ -270,7 +271,6 @@
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
-            Column1.Width = 65;
             // 
             // Column2
             // 
@@ -279,7 +279,6 @@
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
-            Column2.Width = 147;
             // 
             // Column3
             // 
@@ -288,7 +287,6 @@
             Column3.MinimumWidth = 6;
             Column3.Name = "Column3";
             Column3.ReadOnly = true;
-            Column3.Width = 143;
             // 
             // Column4
             // 
@@ -297,7 +295,6 @@
             Column4.MinimumWidth = 6;
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
-            Column4.Width = 123;
             // 
             // Column5
             // 
@@ -306,7 +303,6 @@
             Column5.MinimumWidth = 6;
             Column5.Name = "Column5";
             Column5.ReadOnly = true;
-            Column5.Width = 122;
             // 
             // Column6
             // 
@@ -315,7 +311,6 @@
             Column6.MinimumWidth = 6;
             Column6.Name = "Column6";
             Column6.ReadOnly = true;
-            Column6.Width = 121;
             // 
             // Column7
             // 
@@ -324,7 +319,6 @@
             Column7.MinimumWidth = 6;
             Column7.Name = "Column7";
             Column7.ReadOnly = true;
-            Column7.Width = 121;
             // 
             // Column8
             // 
@@ -333,11 +327,10 @@
             Column8.MinimumWidth = 6;
             Column8.Name = "Column8";
             Column8.ReadOnly = true;
-            Column8.Width = 119;
             // 
             // UC_QuanLySinhVien
             // 
-            AutoScaleDimensions = new SizeF(11F, 22F);
+            AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dataGridView1);
             Controls.Add(btnLamMoi);

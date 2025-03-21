@@ -22,6 +22,9 @@
     <Compile Update="UC_LichHoc.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UC_QuanLyLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UC_QuanLyMonHoc.cs">
       <SubType>UserControl</SubType>
     </Compile>

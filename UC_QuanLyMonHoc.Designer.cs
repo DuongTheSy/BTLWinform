@@ -53,7 +53,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(211, 42);
             label1.Name = "label1";
-            label1.Size = new Size(36, 22);
+            label1.Size = new Size(28, 19);
             label1.TabIndex = 0;
             label1.Text = "ID:";
             // 
@@ -62,7 +62,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(386, 42);
             label2.Name = "label2";
-            label2.Size = new Size(117, 22);
+            label2.Size = new Size(91, 19);
             label2.TabIndex = 0;
             label2.Text = "Tên môn học:";
             // 
@@ -71,7 +71,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(211, 103);
             label3.Name = "label3";
-            label3.Size = new Size(113, 22);
+            label3.Size = new Size(89, 19);
             label3.TabIndex = 0;
             label3.Text = "Mã môn học:";
             // 
@@ -80,7 +80,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(563, 104);
             label4.Name = "label4";
-            label4.Size = new Size(91, 22);
+            label4.Size = new Size(68, 19);
             label4.TabIndex = 0;
             label4.Text = "Số tín chỉ:";
             // 
@@ -88,28 +88,28 @@
             // 
             txtID.Location = new Point(253, 39);
             txtID.Name = "txtID";
-            txtID.Size = new Size(83, 30);
+            txtID.Size = new Size(83, 26);
             txtID.TabIndex = 1;
             // 
             // txtMonHoc
             // 
             txtMonHoc.Location = new Point(509, 39);
             txtMonHoc.Name = "txtMonHoc";
-            txtMonHoc.Size = new Size(228, 30);
+            txtMonHoc.Size = new Size(228, 26);
             txtMonHoc.TabIndex = 2;
             // 
             // txtMaMonHoc
             // 
             txtMaMonHoc.Location = new Point(330, 99);
             txtMaMonHoc.Name = "txtMaMonHoc";
-            txtMaMonHoc.Size = new Size(188, 30);
+            txtMaMonHoc.Size = new Size(188, 26);
             txtMaMonHoc.TabIndex = 3;
             // 
             // txtSoTinChi
             // 
             txtSoTinChi.Location = new Point(660, 99);
             txtSoTinChi.Name = "txtSoTinChi";
-            txtSoTinChi.Size = new Size(89, 30);
+            txtSoTinChi.Size = new Size(89, 26);
             txtSoTinChi.TabIndex = 4;
             // 
             // btnThem
@@ -120,6 +120,7 @@
             btnThem.TabIndex = 5;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
             // btnSua
             // 
@@ -129,6 +130,7 @@
             btnSua.TabIndex = 5;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
             // 
             // btnXoa
             // 
@@ -138,6 +140,7 @@
             btnXoa.TabIndex = 5;
             btnXoa.Text = "Xóa";
             btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnLamMoi
             // 
@@ -147,6 +150,7 @@
             btnLamMoi.TabIndex = 5;
             btnLamMoi.Text = "Làm mới";
             btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
             // 
             // dataGridView1
             // 
@@ -164,6 +168,7 @@
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(723, 415);
             dataGridView1.TabIndex = 6;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // Column1
             // 
@@ -195,7 +200,7 @@
             // 
             // UC_QuanLyMonHoc
             // 
-            AutoScaleDimensions = new SizeF(11F, 22F);
+            AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dataGridView1);
             Controls.Add(btnLamMoi);

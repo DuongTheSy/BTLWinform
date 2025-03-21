@@ -84,6 +84,7 @@
             btnQuanLyLopTinChi.TabIndex = 5;
             btnQuanLyLopTinChi.Text = "Quản lý lớp tín chỉ";
             btnQuanLyLopTinChi.UseVisualStyleBackColor = true;
+            btnQuanLyLopTinChi.Click += btnQuanLyLopTinChi_Click;
             // 
             // btnQuanLyMonHoc
             // 

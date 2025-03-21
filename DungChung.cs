@@ -10,9 +10,11 @@ public class DungChung
 
     public DungChung()
     {
-        connectionString = "Server=localhost;Database=btl_winforms;Trusted_Connection=True;";
+        connectionString = "Data Source=192.168.1.235,1433;Initial Catalog=master;User ID=sa;Password=CJnEmigeG!@JLipcRy4&2MNv;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         connection = new SqlConnection(connectionString);
     }
+
+    public string getConnectionString() { return connectionString; }
 
     // Phương thức mở kết nối
     public void OpenConnection()
@@ -21,6 +23,7 @@ public class DungChung
         {
             connection.Open();
         }
+
     }
 
     // Phương thức đóng kết nối

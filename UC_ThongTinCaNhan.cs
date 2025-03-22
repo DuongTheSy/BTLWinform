@@ -25,7 +25,7 @@ namespace BTLWinform
         {
             DungChung dungChung = new DungChung();
             dungChung.OpenConnection();
-            string query = $"SELECT * FROM SinhVien Where MaSV = {maSinhVien}";
+            string query = $"SELECT * FROM SinhVien Where ID = {maSinhVien}";
             DataTable dt = dungChung.GetDataTable(query);
             foreach (DataRow row in dt.Rows)
             {

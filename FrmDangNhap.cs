@@ -22,20 +22,8 @@ namespace BTLWinform
             int maNguoiDung = 0;
             string taiKhoan = txtTaiKhoan.Text;
             string matKhau = txtMatKhau.Text;
-            string vaiTro = "";
             string query = "";
             string ma = "";
-
-            if (rdoSinhVien.Checked)
-            {
-                vaiTro = "SinhVien";
-                ma = "MaSV";
-            }
-            if (rdoGiangVien.Checked)
-            {
-                vaiTro = "GiangVien";
-                ma = "MaGV";
-            }
 
             if (string.IsNullOrEmpty(taiKhoan) || string.IsNullOrEmpty(matKhau))
             {
@@ -44,22 +32,32 @@ namespace BTLWinform
             }
             DungChung dungChung = new DungChung();
             dungChung.OpenConnection();
-            query = $"SELECT {ma} FROM {vaiTro} WHERE TenDangNhap = '{taiKhoan}' AND MatKhau = '{matKhau}'";
+            query = $"SELECT MaAdmin FROM Admin WHERE TenDangNhap = '{taiKhoan}' AND MatKhau = '{matKhau}'";
             maNguoiDung = dungChung.ExecuteScalar(query);
-            System.Diagnostics.Debug.WriteLine(maNguoiDung);
             if (maNguoiDung != 0)
             {
-                System.Diagnostics.Debug.WriteLine(vaiTro);
-                FrmSinhVien frmSinhVien = new FrmSinhVien(maNguoiDung, vaiTro);
+                FrmAdmin frmAdmin = new FrmAdmin();
                 this.Hide();
-                frmSinhVien.Show();
+                frmAdmin.Show();
+      
             }
             else
             {
-                MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                query = $"SELECT ID FROM SinhVien WHERE TenDangNhap = '{taiKhoan}' AND MatKhau = '{matKhau}'";
+                maNguoiDung = dungChung.ExecuteScalar(query);
+                if (maNguoiDung != 0)
+                {
+                    FrmSinhVien frmSinhVien = new FrmSinhVien(maNguoiDung);
+                    System.Diagnostics.Debug.WriteLine(maNguoiDung + "abc");
+                    this.Hide();
+                    frmSinhVien.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                dungChung.CloseConnection();
             }
-            dungChung.CloseConnection();
-
         }
 
         private void FrmDangNhap_Load(object sender, EventArgs e)

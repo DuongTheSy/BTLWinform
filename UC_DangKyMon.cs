@@ -25,8 +25,8 @@ namespace BTLWinform
             dungchung.OpenConnection();
             query = "SELECT ltc.MaLTC, mh.TenMH, mh.SoTinChi, ltc.HocKy, ltc.NamHoc, gv.HoTen AS GiangVien, ltc.BuoiHoc " +
                                "FROM LopTinChi ltc " +
-                               "JOIN MonHoc mh ON ltc.MaMH = mh.MaMH " +
-                               "LEFT JOIN GiangVien gv ON ltc.MaGV = gv.MaGV";
+                               "JOIN MonHoc mh ON ltc.IDMH = mh.ID " +
+                               "LEFT JOIN GiangVien gv ON ltc.IDGV = gv.ID";
             dungchung.LoadDataToGridView(query,dgvLopTinChi);
         }
     }

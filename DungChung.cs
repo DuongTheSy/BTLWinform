@@ -8,9 +8,13 @@ public class DungChung
     private string connectionString;
     private SqlConnection connection;
 
+    public SqlConnection Connection { get; internal set; }
+
     public DungChung()
-    {
-        connectionString = "Data Source=192.168.1.235,1433;Initial Catalog=master;User ID=sa;Password=CJnEmigeG!@JLipcRy4&2MNv;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+    {   
+        // của Sỹ
+        connectionString = "Server=localhost;Database=BTL;Trusted_Connection=True;";
+        //connectionString = "Data Source=192.168.1.235,1433;Initial Catalog=master;User ID=sa;Password=CJnEmigeG!@JLipcRy4&2MNv;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         connection = new SqlConnection(connectionString);
     }
 

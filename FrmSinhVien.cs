@@ -6,12 +6,10 @@ namespace BTLWinform
     public partial class FrmSinhVien : Form
     {
         private int maSinhVien;
-        private string vaitro;
-        public FrmSinhVien(int ma, string vaitro)
+        public FrmSinhVien(int ma)
         {
             InitializeComponent();
             maSinhVien = ma;
-            this.vaitro = vaitro;
         }
 
 
@@ -19,7 +17,7 @@ namespace BTLWinform
         {
             lblTitle.Text = "Lịch học";
             pnContent.Controls.Clear();
-            pnContent.Controls.Add(new UC_LichHoc(maSinhVien, vaitro));
+            pnContent.Controls.Add(new UC_LichHoc(maSinhVien));
         }
 
         private void btnThongTinCaNhan_Click(object sender, EventArgs e)
@@ -50,6 +48,12 @@ namespace BTLWinform
             lblTitle.Text = "Đăng ký tín chỉ";
             pnContent.Controls.Clear();
             pnContent.Controls.Add(new UC_DangKyMon());
+        }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            FrmDoiMatKhau frmDoiMatKhau = new FrmDoiMatKhau(maSinhVien);
+            frmDoiMatKhau.Show();
         }
     }
 }

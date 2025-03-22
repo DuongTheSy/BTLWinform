@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             panelMenu = new Panel();
-            btnQuanLyDangKyMon = new Button();
             btnQuanLyLopTinChi = new Button();
             btnQuanLyMonHoc = new Button();
-            btnDoiMatKhau = new Button();
             btnQuanLyGiangVien = new Button();
             btnQuanLySinhVien = new Button();
             btnTrangchu = new Button();
@@ -47,10 +45,8 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(41, 128, 185);
-            panelMenu.Controls.Add(btnQuanLyDangKyMon);
             panelMenu.Controls.Add(btnQuanLyLopTinChi);
             panelMenu.Controls.Add(btnQuanLyMonHoc);
-            panelMenu.Controls.Add(btnDoiMatKhau);
             panelMenu.Controls.Add(btnQuanLyGiangVien);
             panelMenu.Controls.Add(btnQuanLySinhVien);
             panelMenu.Controls.Add(btnTrangchu);
@@ -60,18 +56,6 @@
             panelMenu.Name = "panelMenu";
             panelMenu.Size = new Size(220, 688);
             panelMenu.TabIndex = 1;
-            // 
-            // btnQuanLyDangKyMon
-            // 
-            btnQuanLyDangKyMon.Dock = DockStyle.Top;
-            btnQuanLyDangKyMon.FlatStyle = FlatStyle.Flat;
-            btnQuanLyDangKyMon.ForeColor = Color.White;
-            btnQuanLyDangKyMon.Location = new Point(0, 250);
-            btnQuanLyDangKyMon.Name = "btnQuanLyDangKyMon";
-            btnQuanLyDangKyMon.Size = new Size(220, 50);
-            btnQuanLyDangKyMon.TabIndex = 6;
-            btnQuanLyDangKyMon.Text = "Quản lý đăng ký môn";
-            btnQuanLyDangKyMon.UseVisualStyleBackColor = true;
             // 
             // btnQuanLyLopTinChi
             // 
@@ -98,17 +82,6 @@
             btnQuanLyMonHoc.Text = "Quản lý môn học";
             btnQuanLyMonHoc.UseVisualStyleBackColor = true;
             btnQuanLyMonHoc.Click += btnQuanLyMonHoc_Click;
-            // 
-            // btnDoiMatKhau
-            // 
-            btnDoiMatKhau.Dock = DockStyle.Bottom;
-            btnDoiMatKhau.FlatStyle = FlatStyle.Flat;
-            btnDoiMatKhau.ForeColor = Color.White;
-            btnDoiMatKhau.Location = new Point(0, 588);
-            btnDoiMatKhau.Name = "btnDoiMatKhau";
-            btnDoiMatKhau.Size = new Size(220, 50);
-            btnDoiMatKhau.TabIndex = 4;
-            btnDoiMatKhau.Text = "Đổi mật khẩu";
             // 
             // btnQuanLyGiangVien
             // 
@@ -155,6 +128,7 @@
             btnDangXuat.Size = new Size(220, 50);
             btnDangXuat.TabIndex = 3;
             btnDangXuat.Text = "Đăng xuất";
+            btnDangXuat.Click += btnDangXuat_Click;
             // 
             // panelContent
             // 
@@ -208,10 +182,8 @@
         #endregion
 
         private Button btnQuanLyGiangVien;
-        private Button btnDoiMatKhau;
         private Panel pnContent;
         private Button btnQuanLyMonHoc;
         private Button btnQuanLyLopTinChi;
-        private Button btnQuanLyDangKyMon;
     }
 }

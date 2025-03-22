@@ -13,14 +13,12 @@ namespace BTLWinform
     public partial class UC_LichHoc : UserControl
     {
         private int maSinhVien;
-        private string vaitro;
-        public UC_LichHoc(int ma, string vaitro)
+        public UC_LichHoc(int ma)
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
             maSinhVien = ma;
             LoadLichHoc();
-            this.vaitro = vaitro;
         }
         private void LoadLichHoc()
         {
@@ -30,8 +28,8 @@ namespace BTLWinform
                         DATENAME(WEEKDAY, ltc.NgayBatDau) AS ThuMay, ltc.BuoiHoc 
                  FROM DangKy dk
                  JOIN LopTinChi ltc ON dk.MaLTC = ltc.MaLTC
-                 JOIN MonHoc mh ON ltc.MaMH = mh.MaMH
-                 JOIN GiangVien gv ON ltc.MaGV = gv.MaGV
+                 JOIN MonHoc mh ON ltc.IDMH = mh.ID
+                 JOIN GiangVien gv ON ltc.IDGV = gv.ID
                  WHERE dk.MaSV = {maSinhVien}
                  ORDER BY ThuMay";
 

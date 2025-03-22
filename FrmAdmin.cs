@@ -44,5 +44,17 @@ namespace BTLWinform
             pnContent.Controls.Clear();
             pnContent.Controls.Add(new UC_QuanLyLop());
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận",
+                              MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+                FrmDangNhap frmDangNhap = new FrmDangNhap();
+                frmDangNhap.Show();
+            }
+        }
     }
 }
